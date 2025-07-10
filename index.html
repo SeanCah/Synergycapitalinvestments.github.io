@@ -5,123 +5,121 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Synergy Capital Investments</title>
   <style>
-  body {
-    margin: 0;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background-color: #1a1a1a; /* deep charcoal instead of pure black */
-    color: #f1f1f1;
-  }
-  header {
-    background-color: #1a1a1a; /* deep charcoal */
-    color: #800020; /* burgundy accent */
-  }
-  nav {
-    background-color: #2b2b2b; /* softer black */
-  }
-  nav a {
-    color: #800020; /* burgundy links */
-  }
-  nav a:hover {
-    background-color: #3a3a3a; /* slightly lighter hover */
-  }
-  .contact-buttons a {
-    background-color: #800020; /* burgundy buttons */
-    color: #fff; /* white text */
-  }
-  .contact-form {
-    background-color: #2b2b2b; /* softer black */
-  }
-  .contact-form button {
-    background-color: #800020; /* burgundy send button */
-    color: #fff;
-  }
-  footer {
-    background-color: #1a1a1a; /* deep charcoal */
-    color: #bbb; /* softer footer text */
-  }
-</style>
-  body {
-    margin: 0;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background-color: #1a1a1a; /* deep charcoal instead of pure black */
-    color: #f1f1f1;
-  }
-  header {
-    background-color: #1a1a1a; /* deep charcoal */
-    color: #800020; /* burgundy accent */
-  }
-  nav {
-    background-color: #2b2b2b; /* softer black */
-  }
-  nav a {
-    color: #800020; /* burgundy links */
-  }
-  nav a:hover {
-    background-color: #3a3a3a; /* slightly lighter hover */
-  }
-  .contact-buttons a {
-    background-color: #800020; /* burgundy buttons */
-    color: #fff; /* white text */
-  }
-  .contact-form {
-    background-color: #2b2b2b; /* softer black */
-  }
-  .contact-form button {
-    background-color: #800020; /* burgundy send button */
-    color: #fff;
-  }
-  footer {
-    background-color: #1a1a1a; /* deep charcoal */
-    color: #bbb; /* softer footer text */
-  }
-</style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background-color: #1a1a1a;
+      color: #f1f1f1;
+    }
+    header {
+      background-color: #1a1a1a;
+      color: #800020; /* Burgundy accent */
+      text-align: center;
+      padding: 80px 20px 40px;
+    }
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+    header p {
+      font-size: 1.3em;
+      margin-top: 10px;
+    }
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+    .carousel img {
+      width: 100%;
+      max-width: 800px;
+      margin: 20px auto;
+      border-radius: 8px;
+      scroll-snap-align: center;
+    }
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #2b2b2b;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 4px;
+      background-color: #444;
+      color: #f1f1f1;
+    }
+    .contact-form button {
+      background-color: #800020;
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .contact-form button:hover {
+      background-color: #a52a2a;
+    }
+    .contact-buttons a {
+      display: inline-block;
+      margin: 15px 10px;
+      padding: 15px 25px;
+      background-color: #800020;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .contact-buttons a:hover {
+      background-color: #a52a2a;
+    }
+    footer {
+      background-color: #1a1a1a;
+      color: #bbb;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
 </head>
 <body>
   <header>
     <h1>Synergy Capital Investments</h1>
     <p>Commercial Spaces & Residential Deals Others Overlook</p>
+    <p><strong>Call us for home buying, land buying, or commercial property buying and selling</strong></p>
     <div class="contact-buttons">
-      <a href="tel:3053938112">Call Now</a>
+      <a href="tel:3053938112">Call: (305) 393-8112</a>
       <a href="mailto:sysnergycapital@comcast.net">Email Us</a>
     </div>
   </header>
 
-  <nav>
-    <a href="#residential">Residential</a>
-    <a href="#commercial">Commercial</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section id="residential">
-    <h2>Residential Properties</h2>
+  <section id="property">
+    <h2>Featured Property</h2>
     <div class="carousel">
-      <img src="https://via.placeholder.com/500x300?text=Luxury+Home+1" alt="Property 1">
-      <img src="https://via.placeholder.com/500x300?text=Luxury+Home+2" alt="Property 2">
-      <img src="https://via.placeholder.com/500x300?text=Luxury+Home+3" alt="Property 3">
+      <img src="images/residential/residential_1/photo1.jpg" alt="Property Photo 1">
+      <img src="images/residential/residential_1/photo2.jpg" alt="Property Photo 2">
+      <img src="images/residential/residential_1/photo3.jpg" alt="Property Photo 3">
+      <img src="images/residential/residential_1/photo4.jpg" alt="Property Photo 4">
+      <img src="images/residential/residential_1/photo5.jpg" alt="Property Photo 5">
+      <img src="images/residential/residential_1/photo6.jpg" alt="Property Photo 6">
+      <img src="images/residential/residential_1/photo7.jpg" alt="Property Photo 7">
+      <img src="images/residential/residential_1/photo8.jpg" alt="Property Photo 8">
     </div>
-  </section>
-
-  <section id="commercial">
-    <h2>Commercial Properties</h2>
-    <div class="carousel">
-      <img src="https://via.placeholder.com/500x300?text=Office+Space+1" alt="Commercial 1">
-      <img src="https://via.placeholder.com/500x300?text=Retail+Property+2" alt="Commercial 2">
-      <img src="https://via.placeholder.com/500x300?text=Warehouse+3" alt="Commercial 3">
-    </div>
-  </section>
-
-  <section id="about">
-    <h2>About Us</h2>
-    <p>At Synergy Capital Investments, we specialize in uncovering hidden real estate opportunities — from luxury homes needing a fresh start to prime commercial spaces ready for revitalization.</p>
   </section>
 
   <section id="contact">
-    <h2>Contact Us</h2>
-    <div class="contact-buttons">
-      <a href="tel:3053938112">Call: (305) 393-8112</a>
-      <a href="mailto:sysnergycapital@comcast.net">Email: sysnergycapital@comcast.net</a>
-    </div>
+    <h2>Inquiries</h2>
+    <p>For more information about this property or other services, please fill out the form below or contact us directly.</p>
     <div class="contact-form">
       <input type="text" placeholder="Your Name">
       <input type="email" placeholder="Your Email">
