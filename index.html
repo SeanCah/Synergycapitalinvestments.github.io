@@ -114,10 +114,76 @@
       padding: 20px;
       font-size: 0.9em;
     }
+    nav {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+}
+nav ul li {
+  margin: 0 15px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #800020;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+nav ul li a:hover {
+  color: #a52a2a;
+}
+
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+.service {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 280px;
+}
+.service h3 {
+  margin-top: 0;
+  color: #800020;
+}
+.service p {
+  color: #555;
+}
   </style>
 </head>
+  <script>
+  document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
 <body>
-  <header>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <header> id="home"
     <h1>Synergy Capital Investment</h1>
     <p class="tagline">Helping you find the commercial and residential deals others miss</p>
     <p><strong>Call us for home buying, land buying, or commercial property buying and selling</strong></p>
@@ -148,6 +214,23 @@
   <section id="about">
     <h2>About Us</h2>
     <p>With over 30 years in the real estate industry, Synergy Capital Investments specializes in finding off-market deals that others overlook. Our dedication to client success has made us a trusted name in South Florida’s competitive market. Whether it’s residential, land acquisition, or commercial space, we bring decades of expertise and a commitment to excellence.</p>
+  </section>
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services-list">
+      <div class="service">
+        <h3>🏡 Residential Property</h3>
+        <p>Helping you find your dream home, including exclusive off-market opportunities.</p>
+      </div>
+      <div class="service">
+        <h3>🌱 Land Acquisition</h3>
+        <p>Guiding you through strategic land purchases for residential or commercial development.</p>
+      </div>
+      <div class="service">
+        <h3>🏢 Commercial Space</h3>
+        <p>Connecting businesses with the ideal retail, office, or industrial spaces.</p>
+      </div>
+    </div>
   </section>
   <section id="contact">
     <h2>Let’s Talk About Your Next Property</h2>
