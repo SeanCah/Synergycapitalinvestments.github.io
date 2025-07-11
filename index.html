@@ -4,16 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Synergy Capital Investments</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <style>
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background-color: #f8f8f8; /* light background */
-      color: #333; /* dark gray text */
+      background-color: #f8f8f8;
+      color: #333;
     }
     header {
       background-color: #fff;
-      color: #800020; /* Burgundy accent */
+      color: #800020;
       text-align: center;
       padding: 80px 20px 40px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -52,19 +54,20 @@
       margin-bottom: 30px;
       color: #800020;
     }
-    .carousel {
-      display: flex;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      gap: 20px;
-      padding: 20px;
-    }
-    .carousel img {
+    .swiper {
       width: 100%;
-      max-width: 700px;
+      max-width: 800px;
+      margin: 20px auto;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      scroll-snap-align: center;
+    }
+    .swiper-slide img {
+      width: 100%;
+      border-radius: 12px;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #800020;
     }
     .contact-form {
       max-width: 600px;
@@ -119,21 +122,26 @@
 
   <section id="property">
     <h2>Featured Property</h2>
-    <div class="carousel">
-      <img src="home1.jpg" alt="Property Photo 1">
-      <img src="home2.jpg" alt="Property Photo 2">
-      <img src="home3.jpg" alt="Property Photo 3">
-      <img src="home4.jpg" alt="Property Photo 4">
-      <img src="home5.jpg" alt="Property Photo 5">
-      <img src="home6.jpg" alt="Property Photo 6">
-      <img src="home7.jpg" alt="Property Photo 7">
-      <img src="home8.jpg" alt="Property Photo 8">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="home1.jpg" alt="Property Photo 1"></div>
+        <div class="swiper-slide"><img src="home2.jpg" alt="Property Photo 2"></div>
+        <div class="swiper-slide"><img src="home3.jpg" alt="Property Photo 3"></div>
+        <div class="swiper-slide"><img src="home4.jpg" alt="Property Photo 4"></div>
+        <div class="swiper-slide"><img src="home5.jpg" alt="Property Photo 5"></div>
+        <div class="swiper-slide"><img src="home6.jpg" alt="Property Photo 6"></div>
+        <div class="swiper-slide"><img src="home7.jpg" alt="Property Photo 7"></div>
+        <div class="swiper-slide"><img src="home8.jpg" alt="Property Photo 8"></div>
+      </div>
+      <!-- Arrows -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
   </section>
 
   <section id="contact">
     <h2>Inquiries</h2>
-    <p>For more information about this property or other services, please fill out the form below or contact us directly.</p>
+    <p>For more information, please fill out the form below or contact us directly.</p>
     <div class="contact-form">
       <input type="text" placeholder="Your Name">
       <input type="email" placeholder="Your Email">
@@ -145,5 +153,16 @@
   <footer>
     <p>&copy; 2025 Synergy Capital Investments. All rights reserved.</p>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true, // infinite loop
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
 </body>
 </html>
