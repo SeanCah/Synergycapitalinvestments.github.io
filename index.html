@@ -37,23 +37,23 @@
       margin-bottom: 20px;
       color: #800020;
       font-weight: 500;
-    }
-    .contact-buttons a {
-      display: inline-block;
-      margin: 15px 10px;
-      padding: 12px 20px;
-      background-color: #800020;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: 600;
-      transition: background-color 0.3s ease;
-    }
-    .contact-buttons a:hover {
-      background-color: #a52a2a;
-    }
+    }.contact-buttons a {
+  display: inline-block;
+  margin: 15px 10px;
+  padding: 12px 20px;
+  background-color: #800020;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.contact-buttons a:hover {
+  background-color: #a52a2a;
+  transform: scale(1.05);
+}
     section {
-      padding: 60px 20px;
+      padding: 80px 20px;
       text-align: center;
     }
     h2 {
@@ -118,7 +118,8 @@
   position: sticky;
   top: 0;
   background-color: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);/*light shadow*/
+      border-bottom: 1px solid #eee; /* subtle border */
   z-index: 1000;
 }
 nav ul {
@@ -154,6 +155,11 @@ nav ul li a:hover {
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+    .service:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 .service h3 {
   margin-top: 0;
@@ -161,6 +167,55 @@ nav ul li a:hover {
 }
 .service p {
   color: #555;
+}
+    .cta-text {
+  font-size: 1.1em;
+  color: #555;
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+    .hero {
+  background: url('home1.jpg') no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 120px 20px;
+  position: relative;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+.hero h1 {
+  font-size: 3.5em;
+  color: #fff;
+}
+.hero .tagline {
+  font-size: 1.5em;
+  color: #eee;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+.contact-buttons a {
+  background-color: #d4af37;
+  color: #000;
+}
+.contact-buttons a:hover {
+  background-color: #b38e2e;
+}
+    footer {
+  background-color: #800020;
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+}
+footer p {
+  margin: 5px 0;
 }
   </style>
 </head>
@@ -183,15 +238,16 @@ nav ul li a:hover {
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
-  <header> id="home">
-    <h1>Synergy Capital Investment</h1>
+  <header id="home" class="hero">
+  <div class="hero-content">
+    <h1>Synergy Capital Investments</h1>
     <p class="tagline">Helping you find the commercial and residential deals others miss</p>
-    <p><strong>Call us for home buying, land buying, or commercial property buying and selling</strong></p>
     <div class="contact-buttons">
       <a href="tel:3053938112">Call: (305) 393-8112</a>
       <a href="mailto:sysnergycapital@comcast.net">Email Us</a>
     </div>
-  </header>
+  </div>
+</header>
 
   <section id="property">
     <h2>Featured Property</h2>
@@ -234,18 +290,19 @@ nav ul li a:hover {
   </section>
   <section id="contact">
     <h2>Let’s Talk About Your Next Property</h2>
-    <p>For more information, please fill out the form below or contact us directly.</p>
-    <div class="contact-form">
-      <input type="text" placeholder="Your Name">
-      <input type="email" placeholder="Your Email">
-      <textarea rows="4" placeholder="Your Message"></textarea>
-      <button type="submit">Send Message</button>
-    </div>
+    <p class="cta-text">Your dream home, your ideal land, or your perfect commercial space—let’s make it happen.</p>
+    <form class="contact-form" method="POST" action="">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
   </section>
 
   <footer>
-    <p>&copy; 2025 Synergy Capital Investment. All rights reserved.</p>
-  </footer>
+  <p>&copy; 2025 Synergy Capital Investments</p>
+  <p>Helping South Florida find exceptional properties for over 30 years.</p>
+</footer>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script>
